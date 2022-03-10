@@ -1,6 +1,4 @@
 FROM scratch
-ADD ubuntu-bionic-oci-amd64-root.tar.gz /
-CMD ["bash"]
 ENV DEBIAN_FRONTEND noninteractive
 MAINTAINER nimsilu
 RUN echo nimsilu
