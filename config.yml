@@ -84,7 +84,7 @@ engine:                      # Engine settings.
     MultiPV: 1
     UCI_Elo: 2850
     Syzygy50MoveRule: true
-    SyzygyProbeLimit type spin: 7
+    SyzygyProbeLimit: 7
     Ponder: true
 #   go_commands:             # Additional options to pass to the UCI go command.
 #     nodes: 1               # Search so many nodes only.
