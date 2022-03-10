@@ -79,13 +79,8 @@ engine:                      # Engine settings.
 #   Hash: 256
   uci_options:               # Arbitrary UCI options passed to the engine.
     Move Overhead: 300       # Increase if your bot flags games too often.
-    Threads: 7               # Max CPU threads the engine can use.
+    Threads: 2               # Max CPU threads the engine can use.
     Hash: 128                # Max memory (in megabytes) the engine can allocate.
-    MultiPV: 1
-    UCI_Elo: 2850
-    Syzygy50MoveRule: true
-    SyzygyProbeLimit: 7
-    Ponder: true
 #   go_commands:             # Additional options to pass to the UCI go command.
 #     nodes: 1               # Search so many nodes only.
 #     depth: 5               # Search depth ply only.
