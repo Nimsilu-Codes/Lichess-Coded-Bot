@@ -28,13 +28,16 @@ RUN 7z e chess-engine.zip && rm chess-engine.zip && mv stockfish* chess-engine
 
 RUN wget --no-check-certificate "https://github.com/SriMethan/lic-bot-heroku/raw/main/engines/fsf" -O fsf
 RUN wget --no-check-certificate "https://github.com/TheDarkGrandmaster2/masterbotheroku/raw/master/engines/lsf" -O lsf
+RUn wget --no-check-certificate "https://github.com/SriMethan/lic-bot-heroku/raw/main/engines/stockfish_14.1_linux_x64_popcnt" -O sf
  
 COPY requirements.txt .
 RUN python3 -m pip install --no-cache-dir -r requirements.txt
 
+
 RUN chmod +x chess-engine
 RUN chmod +x fsf
 RUN chmod +x vsf
+RUN chmod +x sf
 RUN chmod +x lsf
 # Engine name is here ^^^^^^
 
