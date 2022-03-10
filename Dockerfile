@@ -1,8 +1,8 @@
-FROM Ubuntu:impish
+FROM ubuntu:impish
 ENV DEBIAN_FRONTEND noninteractive
-MAINTAINER nimsilu
-RUN echo nimsilu
-CMD echo nimsilu
+MAINTAINER codingforhelp
+RUN echo codingforhelp
+CMD echo codingforhelp
 COPY . .
 
 
