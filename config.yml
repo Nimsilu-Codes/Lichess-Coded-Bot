@@ -3,7 +3,7 @@ url: "https://lichess.org/"  # Lichess base URL.
 
 engine:                      # Engine settings.
   dir: "./"          # Directory containing the engine. This can be an absolute path or one relative to lichess-bot/.
-  name: "sf"        # Binary name of the engine to use.
+  name: "chess-engine"        # Binary name of the engine to use.
   Atomic: "lsf"  # Binary name of the engine for atomic variant to use.
   Antichess: "vsf"  # Binary name of the engine for antichess variant to use.
   Crazyhouse: "fsf"  # Binary name of the engine for crazyhouse variant to use.
@@ -83,9 +83,9 @@ engine:                      # Engine settings.
   homemade_options:
 #   Hash: 256
   uci_options:               # Arbitrary UCI options passed to the engine.
-    Move Overhead: 300       # Increase if your bot flags games too often.
-    Threads: 2               # Max CPU threads the engine can use.
-    Hash: 32                 # Max memory (in megabytes) the engine can allocate.
+    Move Overhead: 200       # Increase if your bot flags games too often.
+    Threads: 3               # Max CPU threads the engine can use.
+    Hash: 128                # Max memory (in megabytes) the engine can allocate.
 #   go_commands:             # Additional options to pass to the UCI go command.
 #     nodes: 1               # Search so many nodes only.
 #     depth: 5               # Search depth ply only.
