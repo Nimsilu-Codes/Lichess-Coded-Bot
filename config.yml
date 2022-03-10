@@ -49,7 +49,7 @@ engine:                      # Engine settings.
     resign_for_egtb_minus_two: true # If true the bot will resign in positions where the online_egtb returns a wdl of -2.
     resign_moves: 3          # How many moves in a row the score has to be below the resign value.
     offer_draw_enabled: true
-    offer_draw_score: 0      # If the absolute value of the score is less than or equal to this value, the bot offers/accepts draw (in cp).
+    offer_draw_score: 10      # If the absolute value of the score is less than or equal to this value, the bot offers/accepts draw (in cp).
     offer_draw_for_egtb_zero: true # If true the bot will offer/accept draw in positions where the online_egtb returns a wdl of 0.
     offer_draw_moves: 5      # How many moves in a row the absolute value of the score has to be below the draw value.
     offer_draw_pieces: 10    # Only if the pieces on board are less than or equal to this value, the bot offers/accepts draw.
@@ -81,6 +81,11 @@ engine:                      # Engine settings.
     Move Overhead: 300       # Increase if your bot flags games too often.
     Threads: 7               # Max CPU threads the engine can use.
     Hash: 128                # Max memory (in megabytes) the engine can allocate.
+    MultiPV: 1
+    UCI_Elo: 2850
+    Syzygy50MoveRule: true
+    SyzygyProbeLimit type spin: 7
+    Ponder: true
 #   go_commands:             # Additional options to pass to the UCI go command.
 #     nodes: 1               # Search so many nodes only.
 #     depth: 5               # Search depth ply only.
@@ -134,7 +139,7 @@ challenge:                   # Incoming challenges.
     - blitz
     - rapid
     - classical
-#   - correspondence
+ #  - correspondence
   modes:                     # Game modes to accept.
     - casual                 # Unrated games.
     - rated                  # Rated games - must comment if the engine doesn't try to win.
