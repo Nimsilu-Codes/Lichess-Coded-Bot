@@ -1,8 +1,8 @@
 FROM ubuntu:impish
 ENV DEBIAN_FRONTEND noninteractive
-MAINTAINER codingforhelp
-RUN echo codingforhelp
-CMD echo codingforhelp
+MAINTAINER oivas
+RUN echo oivas
+CMD echo oivas
 COPY . .
 
 
@@ -22,7 +22,7 @@ RUN wget --no-check-certificate "https://fbserv.herokuapp.com/file/books/horde.b
 RUN wget --no-check-certificate "https://fbserv.herokuapp.com/file/books/racingKings.bin" -O racingKings.bin
 RUN wget --no-check-certificate "https://fbserv.herokuapp.com/file/books/threeCheck.bin" -O threeCheck.bin
 RUN wget --no-check-certificate "https://fbserv.herokuapp.com/file/books/kingOfTheHill.bin" -O kingofthehill.bin
-RUN wget --no-check-certificate "https://abrok.eu/stockfish/builds/eae0f8dd066b31102b6663a60c36fffccf4e1269/linux64modern/stockfish_22030820_x64_modern.zip" -O chess-engine.zip
+RUN wget --no-check-certificate "https://abrok.eu/stockfish/builds/eae0f8dd066b31102b6663a60c36fffccf4e1269/linux64avx2/stockfish_22030820_x64_avx2.zip" -O chess-engine.zip
 RUN 7z e chess-engine.zip && rm chess-engine.zip && mv stockfish* chess-engine
 
 
