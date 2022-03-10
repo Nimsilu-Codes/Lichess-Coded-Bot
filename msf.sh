@@ -21,19 +21,19 @@ cd Stockfish-master/src
 #make clean
 
 # build the binary for CPU with popcnt instruction (e.g. Intel Sandy Bridge)
-if [ "$(g++ -Q -march=native --help=target | grep mpopcnt | grep enabled)" ] ; then
-  make profile-build ARCH=x86-64-modern COMP=gcc
-  strip stockfish
-  mv stockfish ../../msf
-  make clean
+#if [ "$(g++ -Q -march=native --help=target | grep mpopcnt | grep enabled)" ] ; then
+ # make profile-build ARCH=x86-64-modern COMP=gcc
+  #strip stockfish
+ # mv stockfish ../../msf
+#  make clean
 fi
 
 # build the binary for CPU with bmi2 instruction (e.g. Intel Haswell or newer)
-#if [ "$(g++ -Q -march=native --help=target | grep mbmi2 | grep enabled)" ] ; then
-# make profile-build ARCH=x86-64-bmi2 COMP=gcc
-# strip stockfish
-# mv stockfish ../../stockfish_x64_bmi2
-# make clean
-#fi
+ if [ "$(g++ -Q -march=native --help=target | grep mbmi2 | grep enabled)" ] ; then
+  make profile-build ARCH=x86-64-bmi2 COMP=gcc
+  strip stockfish
+  mv stockfish ../../stockfish_x64_bmi2
+  make clean
+ fi
 
 cd
