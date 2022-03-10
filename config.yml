@@ -5,9 +5,9 @@ engine:                      # Engine settings.
   dir: "./"          # Directory containing the engine. This can be an absolute path or one relative to lichess-bot/.
   name: "chess-engine"        # Binary name of the engine to use.
   Atomic: "lsf"  # Binary name of the engine for atomic variant to use.
-  Antichess: "vsf"  # Binary name of the engine for antichess variant to use.
-  Crazyhouse: "fsf"  # Binary name of the engine for crazyhouse variant to use.
-  Horde: "fsf"   # Binary name of the engine for horde variant to use.
+  Antichess: "msf"  # Binary name of the engine for antichess variant to use.
+  Crazyhouse: "vsf"  # Binary name of the engine for crazyhouse variant to use.
+  Horde: "vsf"   # Binary name of the engine for horde variant to use.
   King of the Hill: "fsf"   # Binary name of the engine for koth variant to use.
   Racing Kings: "vsf"  # Binary name of the engine for racing kings variant to use.
   Three-check: "fsf"   # Binary name of the engine for three check variant to use.
@@ -56,7 +56,7 @@ engine:                      # Engine settings.
     offer_draw_enabled: true
     offer_draw_score: 0      # If the absolute value of the score is less than or equal to this value, the bot offers/accepts draw (in cp).
     offer_draw_for_egtb_zero: true # If true the bot will offer/accept draw in positions where the online_egtb returns a wdl of 0.
-    offer_draw_moves: 10      # How many moves in a row the absolute value of the score has to be below the draw value.
+    offer_draw_moves: 5      # How many moves in a row the absolute value of the score has to be below the draw value.
     offer_draw_pieces: 10    # Only if the pieces on board are less than or equal to this value, the bot offers/accepts draw.
   online_moves:
     chessdb_book:
@@ -86,8 +86,8 @@ engine:                      # Engine settings.
  
 option name Contempt type spin : 24
 option name Analysis Contempt type combo : Both var Off var White var Black var Both
-option name Threads type spin : 2
-option name Hash type spin : 6048
+option name Threads type spin : 7
+option name Hash type spin : 4000
 option name Ponder type check : true
 option name MultiPV type spin : 1
 option name Skill Level type spin : 20
@@ -142,8 +142,8 @@ correspondence:
 
 challenge:                   # Incoming challenges.
   concurrency: 1             # Number of games to play simultaneously.
-  sort_by: "best"            # Possible values: "best" and "first".
-  accept_bot: true          # Accepts challenges coming from other bots.
+  sort_by: "first"           # Possible values: "best" and "first".
+  accept_bot: true           # Accepts challenges coming from other bots.
   only_bot: false            # Accept challenges by bots only.
   max_increment: 180         # Maximum amount of increment to accept a challenge. The max is 180. Set to 0 for no increment.
   min_increment: 0           # Minimum amount of increment to accept a challenge.
