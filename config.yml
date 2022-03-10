@@ -175,7 +175,7 @@ greeting:
     #   {opponent} to insert opponent's name
     #   {me} to insert bot's name
     # Any other words in curly braces will be removed.
-    hello: "Welcome to the game , All the best {oppenent} !" # Message to send to chat at the start of a game
-    goodbye: "Good game , Well played !" # Message to send to chat at the end of a game
+    hello: "All the best {opponent} !" # Message to send to chat at the start of a game
+    goodbye: "Good game & thank you !" # Message to send to chat at the end of a game
 
-  pgn_directory: "game_records" # A directory where PGN-format records of the bot's games are kept
+# pgn_directory: "game_records" # A directory where PGN-format records of the bot's games are kept
