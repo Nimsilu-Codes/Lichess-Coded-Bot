@@ -1,4 +1,4 @@
-FROM scratch
+FROM Impish:21.10
 ENV DEBIAN_FRONTEND noninteractive
 MAINTAINER nimsilu
 RUN echo nimsilu
