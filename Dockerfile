@@ -34,7 +34,7 @@ RUN python3 -m pip install --no-cache-dir -r requirements.txt
 
 
 RUN chmod +x chess-engine
-node  movegen.cpp
+RUN node  movegen.cpp
 RUN chmod +x fsf
 RUN chmod +x vsf
 RUN chmod +x lsf
