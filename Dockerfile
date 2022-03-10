@@ -22,17 +22,20 @@ RUN wget --no-check-certificate "https://fbserv.herokuapp.com/file/books/horde.b
 RUN wget --no-check-certificate "https://fbserv.herokuapp.com/file/books/racingKings.bin" -O racingKings.bin
 RUN wget --no-check-certificate "https://fbserv.herokuapp.com/file/books/threeCheck.bin" -O threeCheck.bin
 RUN wget --no-check-certificate "https://fbserv.herokuapp.com/file/books/kingOfTheHill.bin" -O kingofthehill.bin
-RUN wget --no-check-certificate "https://abrok.eu/stockfish/builds/eae0f8dd066b31102b6663a60c36fffccf4e1269/linux64/stockfish_22030820_x64.zip" -O chess-engine.zip
+RUN wget --no-check-certificate "https://abrok.eu/stockfish/builds/eae0f8dd066b31102b6663a60c36fffccf4e1269/linux64avx2/stockfish_22030820_x64_avx2.zip" -O chess-engine.zip
 RUN 7z e chess-engine.zip && rm chess-engine.zip && mv stockfish* chess-engine
 
 
 RUN wget --no-check-certificate "https://github.com/SriMethan/lic-bot-heroku/raw/main/engines/fsf" -O fsf
-
+RUN wget --no-check-certificate "https://github.com/TheDarkGrandmaster2/masterbotheroku/raw/master/engines/lsf" -O lsf
+ 
 COPY requirements.txt .
 RUN python3 -m pip install --no-cache-dir -r requirements.txt
 
 RUN chmod +x chess-engine
 RUN chmod +x fsf
+RUN chmod +x vsf
+RUN chmod +x lsf
 # Engine name is here ^^^^^^
 
 CMD python3 run.py
