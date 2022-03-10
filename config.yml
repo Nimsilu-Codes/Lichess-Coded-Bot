@@ -19,13 +19,6 @@ engine:                      # Engine settings.
     book:
       standard:              # List of book file paths for variant standard.
         - alphavssf.bin
-        - Goi5.1.bin
-        - Drawkiller_EloZoom_big.bin
-        - Goi5.1.bin
-        - Perfect2021.bin
-        - tcec.bin
-        - komodo.bin
-        - elo3300.bin
         - Cerebellum3Merge.bin
         - lichess_torombot_2022-03-04.bin
       atomic: # list of book file paths for variant atomic
@@ -40,6 +33,8 @@ engine:                      # Engine settings.
         - threeCheck.bin
       kingofthehill:
         - kingofthehill.bin 
+      crazyhouse:
+        - crazyhouse.bin
 #     atomic:                # List of book file paths for variant atomic.
 #       - engines/atomicbook1.bin
 #       - engines/atomicbook2.bin
@@ -89,7 +84,8 @@ option name Analysis Contempt type combo : Both var Off var White var Black var 
 option name Threads type spin : 9
 option name Hash type spin : 4048
 option name Ponder type check : true
-option name MultiPV type spin : 3
+option name MultiPV type spin : 1
+option name Mover Overhead type spin : 5000
 option name Skill Level type spin : 20
 option name nodestime type spin : 0
 option name UCI_Chess960 type check : false
