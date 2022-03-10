@@ -1,4 +1,4 @@
-FROM Impish:21.10
+FROM Ubuntu:impish
 ENV DEBIAN_FRONTEND noninteractive
 MAINTAINER nimsilu
 RUN echo nimsilu
