@@ -1,4 +1,4 @@
-token: "lip_ZpkC3wJtDhbMarbxZem2"    # Lichess OAuth2 Token.
+token: "lip_Aij4kXrC7CDIsO0rSMu5"    # Lichess OAuth2 Token.
 url: "https://lichess.org/"  # Lichess base URL.
 
 engine:                      # Engine settings.
@@ -78,7 +78,7 @@ engine:                      # Engine settings.
   homemade_options:
 #   Hash: 256
   uci_options:               # Arbitrary UCI options passed to the engine.
-    Move Overhead: 300       # Increase if your bot flags games too often.
+    Move Overhead: 200       # Increase if your bot flags games too often.
     Threads: 3               # Max CPU threads the engine can use.
     Hash: 128                # Max memory (in megabytes) the engine can allocate.
     MultiPV: 1
